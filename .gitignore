@@ -1,0 +1,17 @@
+.state/
+.workspaces/
+*.log
+node_modules/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+.npm/
+coverage/
+dist/
+tmp/
+*.tgz
+*.zip
+*.bak
+.install-backups/

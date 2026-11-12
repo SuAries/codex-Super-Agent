@@ -1,0 +1,36 @@
+{
+  "taskId": "00000000-0000-4000-8000-000000000001",
+  "workerAttempt": 1,
+  "worktreePath": "/absolute/path/to/runtime/.workspaces/00000000-0000-4000-8000-000000000001",
+  "outcome": "NOT_VERIFIED",
+  "verificationScope": "FUNCTIONAL_CHECK",
+  "checkedBy": "CODEX_CURRENT_SESSION",
+  "observedAt": "2026-11-11T00:00:00.000Z",
+  "startup": {
+    "kind": "web",
+    "target": "http://127.0.0.1:18744/",
+    "opened": false,
+    "errors": []
+  },
+  "items": [
+    {
+      "requirementId": "REQ-1",
+      "result": "NOT_VERIFIED",
+      "codeEvidence": "NOT READ: replace with the actual related implementation location.",
+      "action": "NOT PERFORMED: open the actual page and click Increment.",
+      "expected": "The value starts at 0 and changes to 1.",
+      "observed": "No real observation is recorded in this reusable example.",
+      "reason": "EXAMPLE ONLY: record the current task identity, code reading, and actual interaction first."
+    },
+    {
+      "requirementId": "REQ-2",
+      "result": "NOT_VERIFIED",
+      "codeEvidence": "NOT READ: replace with the actual reset implementation location.",
+      "action": "NOT PERFORMED: click Reset when the displayed value is nonzero.",
+      "expected": "The value returns to 0.",
+      "observed": "No real observation is recorded in this reusable example.",
+      "reason": "EXAMPLE ONLY: do not submit this example as a real confirmation."
+    }
+  ],
+  "summary": "LEGACY OPTIONAL EXAMPLE ONLY. This represents the legacy CODEX_FUNCTIONAL_CHECK report shape (protocol 3.3). In protocol 4.0, default workflow uses completeness-only checks and explicit user acceptance via acceptance."
+}

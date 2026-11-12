@@ -1,0 +1,121 @@
+{
+  "reportKind": "FULL",
+  "baseRevision": 0,
+  "summary": "EXAMPLE ONLY: canonical FULL delivery report example illustrating honest per-requirement reporting.",
+  "launch": {
+    "command": "python3 -m http.server 18744 --bind 127.0.0.1",
+    "target": "http://127.0.0.1:18744/",
+    "kind": "web"
+  },
+  "delivery": [
+    {
+      "requirementId": "REQ-001",
+      "status": "READY_FOR_ACCEPTANCE",
+      "implementation": "EXAMPLE ONLY: implemented increment counter handler in index.html and bound click event.",
+      "changedFiles": [
+        "index.html",
+        "src/counter.js"
+      ],
+      "selfChecks": [
+        {
+          "action": "node --check src/counter.js",
+          "status": "PASSED",
+          "result": "Syntax check passed without errors"
+        },
+        {
+          "action": "npm test",
+          "status": "NOT_RUN",
+          "result": "Automated test suite not run; manual test steps provided below"
+        }
+      ],
+      "manualTestSteps": [
+        {
+          "action": "Open http://127.0.0.1:18744/ in browser",
+          "expected": "Counter page loads and displays initial count 0"
+        },
+        {
+          "action": "Click the Increment button once",
+          "expected": "Displayed count updates to 1"
+        }
+      ],
+      "expectedResult": "Counter value increments from 0 to 1 on click.",
+      "remainingWork": [],
+      "remainingIssues": [],
+      "satisfiedCriteria": [0, 1],
+      "blocker": null
+    },
+    {
+      "requirementId": "REQ-002",
+      "status": "PARTIAL",
+      "implementation": "EXAMPLE ONLY: added Reset button markup; handler logic is currently incomplete.",
+      "changedFiles": [
+        "index.html"
+      ],
+      "selfChecks": [
+        {
+          "action": "node --check index.html",
+          "status": "NOT_RUN",
+          "result": "HTML check skipped"
+        }
+      ],
+      "manualTestSteps": [
+        {
+          "action": "Click Reset button after clicking Increment",
+          "expected": "Button renders, but resetting to 0 is pending completion"
+        }
+      ],
+      "expectedResult": "Reset button will restore counter value to 0 once completed.",
+      "remainingWork": [
+        "Implement reset click handler to restore counter value to 0"
+      ],
+      "remainingIssues": [
+        "Reset button does not trigger state change yet"
+      ],
+      "satisfiedCriteria": [0],
+      "blocker": null
+    },
+    {
+      "requirementId": "REQ-003",
+      "status": "BLOCKED",
+      "implementation": "EXAMPLE ONLY: export counter history to cloud endpoint.",
+      "changedFiles": [],
+      "noChangeReason": "Blocked before implementation by missing external API credentials.",
+      "selfChecks": [
+        {
+          "action": "check environment credentials",
+          "status": "FAILED",
+          "result": "Environment variable CLOUD_HISTORY_API_KEY is not defined"
+        }
+      ],
+      "manualTestSteps": [
+        {
+          "action": "Click Export History button",
+          "expected": "Displays configuration prompt requesting missing credentials"
+        }
+      ],
+      "expectedResult": "Counter history will be uploaded once credentials are provided.",
+      "remainingWork": [
+        "Implement history serialization and POST request to export endpoint"
+      ],
+      "remainingIssues": [
+        "External endpoint is unreachable without authentication credentials"
+      ],
+      "satisfiedCriteria": [],
+      "blocker": {
+        "reason": "Missing cloud service API key (CLOUD_HISTORY_API_KEY)",
+        "impact": [
+          "REQ-003"
+        ],
+        "attempted": [
+          {
+            "action": "Read process.env.CLOUD_HISTORY_API_KEY",
+            "result": "Variable is undefined"
+          }
+        ],
+        "owner": "USER",
+        "requiredAssistance": "User provides test sandbox API key in task environment",
+        "resumeWhen": "CLOUD_HISTORY_API_KEY environment variable is configured"
+      }
+    }
+  ]
+}

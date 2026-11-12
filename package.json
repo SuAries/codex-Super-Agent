@@ -1,0 +1,53 @@
+{
+  "name": "superagent-codex-antigravity",
+  "version": "0.7.0",
+  "description": "A local Codex and Antigravity development workflow with per-requirement delivery, incremental self-checks, and user manual acceptance (Engine 0.7.0 / Protocol 4.0).",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "SuAries",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuAries/SuperAgent.git"
+  },
+  "homepage": "https://github.com/SuAries/SuperAgent#readme",
+  "bugs": {
+    "url": "https://github.com/SuAries/SuperAgent/issues"
+  },
+  "bin": {
+    "superagent": "cli.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": ["codex", "antigravity", "agent-orchestration", "human-in-the-loop"],
+  "files": [
+    "cli.mjs",
+    "router/",
+    "scheduler/",
+    "context-manager/",
+    "worker-manager/",
+    "watchdog/",
+    "task-store/",
+    "test/",
+    "scripts/install.mjs",
+    "scripts/runtime-files.json",
+    "templates/",
+    "examples/",
+    "docs/",
+    ".github/",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "CONTRIBUTING.zh-CN.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "check:delivery": "node --test test/delivery-workflow.test.mjs",
+    "doctor": "node cli.mjs doctor",
+    "help": "node cli.mjs help",
+    "install:local": "node scripts/install.mjs"
+  }
+}

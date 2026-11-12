@@ -1,0 +1,48 @@
+{
+  "repo": "/absolute/path/to/your-git-repository",
+  "goal": "EXAMPLE ONLY: Build a small local counter page with increment and reset actions, and cloud export.",
+  "scope": [
+    "index.html",
+    "src/**"
+  ],
+  "constraints": [
+    "EXAMPLE ONLY: Use local HTML, CSS, and browser JavaScript only; do not add unapproved external dependencies.",
+    "Worker self-checks (build, lint, local tests) permitted as needed; unrun checks recorded honestly as NOT_RUN.",
+    "Do not commit, push, merge, deploy, or edit outside the allowed worktree scope."
+  ],
+  "acceptance": [
+    {
+      "requirementId": "REQ-001",
+      "requirement": "The page starts at 0; clicking Increment increases the value by 1.",
+      "acceptanceCriteria": [
+        "Initial page load renders counter with value 0",
+        "Clicking the Increment button increases displayed value by 1"
+      ],
+      "dependsOn": []
+    },
+    {
+      "requirementId": "REQ-002",
+      "requirement": "Clicking Reset when the value is nonzero returns it to 0.",
+      "acceptanceCriteria": [
+        "Reset button is rendered on the counter page",
+        "Clicking the Reset button restores counter value to 0"
+      ],
+      "dependsOn": [
+        "REQ-001"
+      ]
+    },
+    {
+      "requirementId": "REQ-003",
+      "requirement": "Export counter history to cloud endpoint.",
+      "acceptanceCriteria": [
+        "Clicking Export History initiates upload to configured cloud endpoint"
+      ],
+      "dependsOn": [
+        "REQ-001"
+      ]
+    }
+  ],
+  "maxNoProgressRounds": 2,
+  "maxConsecutiveFailures": 2,
+  "defaultRunAutomatedTests": true
+}

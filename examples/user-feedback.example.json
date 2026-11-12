@@ -1,0 +1,18 @@
+{
+  "taskId": "00000000-0000-4000-8000-000000000001",
+  "checklistRevision": 2,
+  "confirmedBy": "USER",
+  "userFeedback": "EXAMPLE ONLY: manual testing performed. Increment works as expected; reset action behaves correctly; export feature is blocked on credentials.",
+  "decisions": [
+    {
+      "requirementId": "REQ-001",
+      "decision": "ACCEPTED",
+      "comment": "Verified manually: counter increments from 0 to 1 upon clicking Increment."
+    },
+    {
+      "requirementId": "REQ-002",
+      "decision": "ACCEPTED",
+      "comment": "Verified manually: clicking Reset returns counter value to 0."
+    }
+  ]
+}
