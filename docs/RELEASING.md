@@ -4,7 +4,7 @@
 
 This is a maintainer checklist, not evidence that a repository or release has been published. Publishing, pushing, tagging, or creating a release requires authorization for the intended destination and contents; act on existing explicit authorization without repeatedly asking. These instructions do not execute those actions.
 
-1. Confirm the approved version (currently engine 0.7.0, protocol 4.0), release scope, destination and release notes. The intended GitHub URL is `https://github.com/SuAries/SuperAgent`; verify the actual destination before publishing. For Gitee, use only the destination the user provides or confirms; no Gitee URL is assumed.
+1. Confirm the approved version (currently engine 0.7.0, protocol 4.0), release scope, destination and release notes. The intended GitHub URL is `https://github.com/SuAries/codex-Super-Agent`; verify the actual destination before publishing. For Gitee, use only the destination the user provides or confirms; no Gitee URL is assumed.
 2. Confirm [LICENSE](../LICENSE) contains the selected MIT terms and copyright, and verify the source-only package includes the README translations, templates (including `templates/AGENTS.global.zh-CN.md`), examples (FULL/DELTA reports, user feedback, markdown delivery report), documentation (`docs/default-delivery-workflow.zh-CN.md`, `docs/en/delivery-protocol.md`) and installer needed by users. Exclude credentials, private task state, personal data, local configuration and unrelated work.
 3. Review changes and verify the documented commands and links against the intended artifact. Record the actual environment and the checks performed, including any missing runtime or platform verification. macOS manual runtime evidence does not establish Linux or native Windows support. Do not claim automated tests or CI without evidence.
 4. Verify version metadata and changelog, prepare the intended source artifact and confirm that the exact destination and contents fall within the user’s existing authorization before creating a tag, pushing, or publishing a GitHub/Gitee release. Ask only for a missing required decision. Inspect the published artifact after an authorized release.
@@ -20,7 +20,7 @@ git init -b main
 git add .
 git diff --cached --name-only
 git commit -m "chore: prepare initial public source snapshot"
-git remote add origin https://github.com/SuAries/SuperAgent.git
+git remote add origin https://github.com/SuAries/codex-Super-Agent.git
 git push -u origin main
 ```
 
@@ -35,7 +35,7 @@ No command above has been executed by this source-preparation task.
 
 本清单是维护者的准备指引，并不代表仓库或版本已经发布。推送、打标签、创建仓库或发布版本须在用户授权的具体目标和内容范围内执行；已有明确授权时不重复询问。本文不会执行这些操作。
 
-1. 确认批准的版本（当前为引擎 0.7.0、协议 4.0）、范围、目标位置和更新说明。计划中的 GitHub 地址为 `https://github.com/SuAries/SuperAgent`，发布前核实实际目标。Gitee 仅使用用户提供或确认的目标，不预设或虚构仓库地址。
+1. 确认批准的版本（当前为引擎 0.7.0、协议 4.0）、范围、目标位置和更新说明。计划中的 GitHub 地址为 `https://github.com/SuAries/codex-Super-Agent`，发布前核实实际目标。Gitee 仅使用用户提供或确认的目标，不预设或虚构仓库地址。
 2. 确认 [LICENSE](../LICENSE) 包含选定的 MIT 条款和版权信息；确认源码包包含用户需要的双语说明、模板（含 `templates/AGENTS.global.zh-CN.md`）、示例（FULL/DELTA 报文、用户反馈、Markdown 交付报告）、文档（`docs/default-delivery-workflow.zh-CN.md`、`docs/en/delivery-protocol.md`）和安装器。排除凭据、私有任务状态、个人数据、本地配置及无关内容。
 3. 对照拟发布的内容检查改动、命令和链接；记录真实环境、已执行的检查和未验证事项。macOS 手工运行证据不能证明 Linux 或原生 Windows 受支持；没有证据时不要声称自动化测试或 CI 通过。
 4. 核对版本元数据和更新记录，准备源码产物，并在打标签、推送或创建 GitHub/Gitee Release 前核对具体目标与内容已处于用户授权范围；只有缺少必要决定时再请求补充。获授权发布后检查实际产物。

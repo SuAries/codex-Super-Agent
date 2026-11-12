@@ -1,4 +1,4 @@
-# SuperAgent
+# codex-Super-Agent
 
 A local, single-worker orchestrator for a Codex + Antigravity development workflow. SuperAgent records a scoped work order, dispatches an Antigravity coding session, tracks a requirement-by-requirement delivery checklist, and presents the result for Codex delivery completeness verification and final manual acceptance by the user.
 
@@ -55,8 +55,8 @@ node cli.mjs doctor --repo /absolute/path/to/project
 Run directly from a local checkout, or use the offline installer:
 
 ```sh
-git clone https://github.com/SuAries/SuperAgent.git
-cd SuperAgent
+git clone https://github.com/SuAries/codex-Super-Agent.git
+cd codex-Super-Agent
 node cli.mjs help
 node scripts/install.mjs
 ```

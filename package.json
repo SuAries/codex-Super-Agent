@@ -8,11 +8,11 @@
   "author": "SuAries",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SuAries/SuperAgent.git"
+    "url": "https://github.com/SuAries/codex-Super-Agent.git"
   },
-  "homepage": "https://github.com/SuAries/SuperAgent#readme",
+  "homepage": "https://github.com/SuAries/codex-Super-Agent#readme",
   "bugs": {
-    "url": "https://github.com/SuAries/SuperAgent/issues"
+    "url": "https://github.com/SuAries/codex-Super-Agent/issues"
   },
   "bin": {
     "superagent": "cli.mjs"

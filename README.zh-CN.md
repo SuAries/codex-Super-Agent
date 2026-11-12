@@ -1,4 +1,4 @@
-# SuperAgent：Codex + Antigravity 本地协作
+# codex-Super-Agent：Codex + Antigravity 本地协作
 
 [English](README.md) | 简体中文
 
@@ -69,8 +69,8 @@ Worker 仅允许设置前 5 种状态；`ACCEPTED` 与 `REJECTED` 必须由用�
 ## 安装与初次检查
 
 ```bash
-git clone https://github.com/SuAries/SuperAgent.git
-cd SuperAgent
+git clone https://github.com/SuAries/codex-Super-Agent.git
+cd codex-Super-Agent
 node cli.mjs help
 node scripts/install.mjs
 ```
